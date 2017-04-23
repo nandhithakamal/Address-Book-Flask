@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Address Book</title>
+     <link type = "text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class = "text-center">
+        <form method="post" action="{{ url_for('post') }}">
+            Name: <input type="text" name = "name"/><br>
+            Phone Number: <input type = "tel" name = "phoneNo"/><br>
+            Email ID: <input type = "email" name = "email"/><br>
+            <input type = "submit" value="Submit" class = "btn btn-primary"/>
+            <input type = "reset" value = "Reset" class = "btn btn-danger"/>
+            <a href = "/index"></a><button class = "btn btn-warning"> Back </button></form></a>
+        </form>
+        {{ contact }}
+    </div>
+
+</body>
+</html>
