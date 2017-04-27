@@ -6,7 +6,12 @@
      <link type = "text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    {{ li }}
+
+   {% for name, phone, email in contacts %}
+       <ul>
+        <li>{{ name }} - {{ phone }} - {{ email }}</li>
+       </ul>
+   {% endfor %}
 
     <a href = "add"><button class = "btn btn-warning">Add a new contact</button></a>
 </body>

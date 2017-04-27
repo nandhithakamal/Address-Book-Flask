@@ -23,9 +23,11 @@ def home():
 @app.route('/view')
 def view():
     cur.execute("select * from addbook")
-    l = cur.fetchall()
-    li = l.__str__()
-    return render_template("view.html", li = li)
+    contacts = cur.fetchall()
+    #contacts = str(l)
+
+
+    return render_template("view.html",  contacts =  contacts)
 
 
 @app.route('/add')
